@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "command": "echo 'Starting Pydantic AI learning session...'"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "command": "black --quiet $file_path 2>/dev/null || true",
+        "description": "Auto-format Python files with Black"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "command": "echo 'Running bash command...'",
+        "description": "Log bash commands"
+      }
+    ]
+  },
+  "permissions": {
+    "allowedTools": ["Bash", "Edit", "Read", "Write", "Glob", "Grep"]
+  }
+}
