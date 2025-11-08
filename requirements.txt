@@ -1,14 +1,25 @@
-# Core dependencies
-pydantic-ai[anthropic]>=0.0.1
+# Core dependencies (verified Nov 2025)
+pydantic-ai[anthropic]>=1.12.0  # Latest stable version
 
 # Optional providers (uncomment as needed)
-# pydantic-ai[openai]>=0.0.1
-# pydantic-ai[gemini]>=0.0.1
+# pydantic-ai[openai]>=1.12.0
+# pydantic-ai[gemini]>=1.12.0
+# pydantic-ai[groq]>=1.12.0
 
-# Development dependencies
+# Notebook support
+jupyter>=1.0.0
+jupyterlab>=4.0.0
+ipywidgets>=8.0.0
+nbformat>=5.9.0
+
+# Testing and evaluation (verified Nov 2025)
 pytest>=7.4.0
 pytest-asyncio>=0.21.0
 pytest-cov>=4.1.0
+pydantic-evals>=1.12.0  # Official Pydantic Evals framework
+
+# Observability (verified Nov 2025)
+logfire>=4.14.0  # Pydantic Logfire for monitoring
 
 # Code quality
 black>=23.0.0
@@ -21,3 +32,8 @@ types-requests>=2.31.0
 # Documentation (optional)
 # mkdocs>=1.5.0
 # mkdocs-material>=9.4.0
+
+# Production features (optional - uncomment as needed)
+# temporal-sdk>=1.0.0  # For durable execution
+# fastapi>=0.104.0     # For API deployment
+# uvicorn>=0.24.0      # ASGI server

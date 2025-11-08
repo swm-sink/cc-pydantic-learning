@@ -49,7 +49,7 @@ htmlcov/
 
 # Jupyter
 .ipynb_checkpoints/
-*.ipynb
+# Note: We DO track .ipynb files in this learning repository
 
 # Environment variables
 .env
